@@ -1,0 +1,214 @@
+<?php
+  include $_SERVER["DOCUMENT_ROOT"]."/html/libs/_top.html";
+  include $_SERVER["DOCUMENT_ROOT"]."/html/libs/_side.html";
+?>
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Setting</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Setting</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- left column -->
+          <div class="col-md-12">
+            <!-- jquery validation -->
+            <form role="form" method="post" action="/app/set_update" >
+            <div class="card card-secondary">
+              <div class="card-header">
+                <h3 class="card-title">Site Setting</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <!-- text input -->
+                      <div class="form-group">
+                        <label>Title</label>
+                        <input type="text" name="title" class="form-control" value="<?php echo set_list(1); ?>" placeholder="Password Change Page">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label>Login Page Color</label>
+                        <input type="text" name="login_bgcolor" value="<?php echo set_list(2); ?>" class="form-control" placeholder="#00000">
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+            </div>
+
+
+          <!-- left column -->
+          <div class="col-md-12">
+            <!-- jquery validation -->
+            <div class="card card-info">
+              <div class="card-header">
+                <h3 class="card-title">LDAP Setting</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <!-- text input -->
+                      <div class="form-group">
+                        <label>LDAP Host</label>
+                        <input type="text" name="ldap_host" value="<?php echo set_list(4);?>" class="form-control" placeholder="1.1.1.1">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label>LDAP Port</label>
+                        <input type="text" name="ldap_port" value="<?php echo set_list(5);?>" class="form-control" placeholder="389">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <!-- textarea -->
+                      <div class="form-group">
+                        <label>LDAP Domain Name</label>
+                        <input type="text" name="domain" value="<?php echo set_list(3);?>" class="form-control" placeholder="corp.test.com">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label>LDAP Base DN</label>
+                        <input type="text" name="ldap_base_dn" value="<?php echo set_list(6);?>" class="form-control" placeholder="dc=test,dc=com">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <!-- textarea -->
+                      <div class="form-group">
+                        <label>LDAP Bind DN</label>
+                        <input type="text" name="ldap_bind_dn" value="<?php echo set_list(7);?>" class="form-control" placeholder="CN=passwdadmin,CN=Users,DC=test,DC=com">
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="form-group">
+                        <label>LDAP Base Password</label>
+                        <input type="password" name="ldap_bind_pwd" value="<?php echo set_list(8);?>" class="form-control" placeholder="testest">
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+		      <div class="form-group">
+			<label>E-Mail Attribute</label>
+                        <input type="text" name="ldap_mail_attribute" value="<?php echo set_list(9);?>" class="form-control" placeholder="mail">
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+            </div>
+          <!-- left column -->
+          <div class="col-md-12">
+            <!-- jquery validation -->
+            <div class="card card-success">
+              <div class="card-header">
+                <h3 class="card-title">STMP Setting</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <!-- text input -->
+                      <div class="form-group">
+                        <label>STMP Server</label>
+                        <input type="text" name="smtp_host" value="<?php echo set_list(10);?>" class="form-control" placeholder="smtp.gmail.com">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label>SMTP Port</label>
+                        <input type="text" name="smtp_port" value="<?php echo set_list(11);?>" class="form-control" placeholder="465">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <!-- text input -->
+                      <div class="form-group">
+                        <label>STMP Login ID</label>
+                        <input type="text" name="smtp_login_id" value="<?php echo set_list(12);?>" class="form-control" placeholder="aaaa@test.com">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label>SMTP Login Password</label>
+                        <input type="password" name="smtp_login_pw" value="<?php echo set_list(13);?>" class="form-control" placeholder="test123">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <!-- text input -->
+                      <div class="form-group">
+                        <label>Send Mail Address</label>
+                        <input type="text" name="smtp_send_addr" value="<?php echo set_list(14);?>" class="form-control" placeholder="norelay@test.com">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <!-- text input -->
+                      <div class="form-group">
+                        <label>Mail Title</label>
+                        <input type="text" name="smtp_mail_title" value="<?php echo set_list(15);?>" class="form-control" placeholder="[Notice] Password Change!!!">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <!-- text input -->
+                      <div class="form-group">
+                        <label>Mail Body</label>
+                        <input type="text" name="smtp_mail_body" value="<?php echo set_list(16);?>" class="form-control" placeholder="New Password">
+                      </div>
+                    </div>
+                  </div>
+                <div class="card-footer-right">
+                  <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+            </div>
+            </form>
+          <!--/.col (left) -->
+          <!-- right column -->
+          <div class="col-md-6">
+          </div>
+          <!--/.col (right) -->
+        </div>
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+<?php
+  include $_SERVER["DOCUMENT_ROOT"]."/html/libs/_footer.html"
+?>

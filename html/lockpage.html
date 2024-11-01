@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<?php 
+global $login_bg_color;
+global $logo_file_path;
+global $domain;
+?>
+<html lang="en">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+        <meta property="og:image" content="/assets/img/logo/logo.png" /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="600" />
+        <?php logo_ico();?>
+	<!-- ================== BEGIN BASE CSS STYLE ================== -->
+	<link href="/assets/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css" rel="stylesheet" />
+	<link href="/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/assets/plugins/fontawesome-free/css/all.min.css" rel="stylesheet" />
+	<link href="/assets/css/animate.min.css" rel="stylesheet" />
+	<link href="/assets/css/style.min.css" rel="stylesheet" />
+	<link href="/assets/css/style-responsive.min.css" rel="stylesheet" />
+	<link href="/assets/css/theme/default.css" rel="stylesheet" id="theme" />
+	<link href="/assets/css/adminlte.min.css" rel="stylesheet" id="theme" />
+	<!-- ================== END BASE CSS STYLE ================== -->
+	
+	<!-- ================== BEGIN BASE JS ================== -->
+	<script src="/assets/plugins/pace/pace.min.js"></script>
+	<!-- ================== END BASE JS ================== -->
+</head>
+<body class="hold-transition lockscreen">
+
+<div class="lockscreen-wrapper">
+<div class="lockscreen-logo">
+<b>Lock</b>Sreen</a>
+</div>
+
+<div class=""><?php echo title();?></div>
+
+<div class="lockscreen-item">
+
+<div class="lockscreen-image">
+<img src="/assets/img/user-default.jpg" alt="User Image">
+</div>
+
+
+<form action="/app/license_update" method="POST" class="lockscreen-credentials">
+<div class="input-group">
+<input type="text" class="form-control" name='license' placeholder="key">
+<button type="submit" class="btn">
+<i class="fas fa-arrow-right text-muted"></i>
+</button>
+</div>
+</div>
+</form>
+
+</div>
+
+<div class="help-block text-center">
+라이센스를 입력하세요
+</div>
+<div class="lockscreen-footer text-center"><font color="red">
+라이센스 만료로 잠겨있습니다.</font>
+</div>
+</div>
+
+
+<script src="/assets/plugins/jquery/jquery.min.js"></script>
+
+<script src="/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</body>
+</html>
+
